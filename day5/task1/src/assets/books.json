@@ -1,0 +1,11 @@
+[
+  { "id": 1, "name": "HTML5" },
+  { "id": 2, "name": "CSS3" },
+  { "id": 3, "name": "JS" },
+  { "id": 4, "name": "AJAX" },
+  { "id": 5, "name": "JQUERY" },
+  { "id": 6, "name": "NODE" },
+  { "id": 7, "name": "ANGULAR JS" },
+  { "id": 8, "name": "PHYSICS" },
+  { "id": 9, "name": "CHEMISTRY" }
+]
