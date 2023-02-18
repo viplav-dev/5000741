@@ -1,0 +1,23 @@
+[
+  {
+    "movieBookingdate": "2022-02-20",
+    "id": 2,
+    "movieName": "Harry Potter",
+    "noOfTickets": 2,
+    "totalAmount": 300
+  },
+  {
+    "movieBookingdate": "2022-02-20",
+    "id": 5,
+    "movieName": "Peter Parker",
+    "noOfTickets": 2,
+    "totalAmount": 300
+  },
+  {
+    "movieBookingdate": "2022-02-20",
+    "id": 1,
+    "movieName": "IronMan",
+    "noOfTickets": 2,
+    "totalAmount": 300
+  }
+]

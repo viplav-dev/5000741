@@ -1,0 +1,18 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "movieName": "Harry Potter",
+      "movieBookingdate": "2020-07-14",
+      "noOfTickets": 9,
+      "totalAmount": 1350
+    },
+    {
+      "id": 2,
+      "movieName": "Spiderman",
+      "movieBookingdate": "2023-06-01",
+      "noOfTickets": 7,
+      "totalAmount": 1050
+    }
+  ]
+}

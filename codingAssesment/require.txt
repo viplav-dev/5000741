@@ -1,0 +1,28 @@
+Problem Statement:		2 Hrs
+BookMyMovie Application  is an online website, through which the required number of tickets can be booked for a particular show. Create an angular application to per from below operations.
+Add new MoveBooking
+to perform List Bookings
+Update bookings 
+DeleteBooking. 	
+1.Implement the components , AddMovieBooking ,UpdateMovieBooking,DeleteMovieBooking and ListAllBookings
+2.Implement forms with vadliation for all fields. (Use forms of type Model Driven/Reactive Forms )
+3.Implements routing, to switch between AddMovieBooking and listAllBookings components.
+4.Implement MovieService and HttptClient to perform all CRUD operations
+5.Use static array of MovieBookings as part of service for data manipulations
+6.Use Observables and Observer to process data
+7.Perform below validations
+Validations Use Regex patterns: id should be between 1 to 300 , should be a number
+movieName should be  alphanumeric of max 20 characters
+noOftickets : A maximum number of 15 tickets can be issued per booking
+totalamount should be populated by number of tickets *150.
+8.PerformUpdateMovieBooking and DeleteMovieBooking based on id selection using Param with routing.
+Sample MovieBooking model calss.
+Movie.ts 
+id:number
+movieName:string
+movieBookingdate:date
+noOfTickets:number
+totalAmount:number
+
+ 
+ 

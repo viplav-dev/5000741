@@ -1,0 +1,34 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Movie ID</th>
+        <th>Movie Name</th>
+        <th>Booking Date</th>
+        <th>Number Of Tickets</th>
+        <th>Total Amount</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of this.bookedMovies">
+        <td>{{ movie["id"] }}</td>
+        <td>{{ movie["movieName"] }}</td>
+        <td>{{ movie["movieBookingdate"] }}</td>
+        <td>{{ movie["noOfTickets"] }}</td>
+        <td>{{ movie["totalAmount"] }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="updateBooking(movie['id'])">
+            Modify
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteBooking(movie['id'])">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

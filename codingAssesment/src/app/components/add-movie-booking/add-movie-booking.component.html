@@ -1,0 +1,56 @@
+<div class="container">
+  <h2>Add / Update New Bookings</h2>
+  <form
+    [formGroup]="addMovieForm"
+    class="form"
+    (ngSubmit)="addMovieBooking(addMovieForm.value)"
+  >
+    <div class="form-group">
+      <label for="id">Movie Id:</label>
+      <input
+        type="number"
+        name="id"
+        id="id"
+        placeholder="1"
+        formControlName="id"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="movieName">Movie Name:</label>
+      <input
+        type="text"
+        name="movieName"
+        id="movieName"
+        placeholder="Harry Potter"
+        formControlName="movieName"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="movieBookingdate">Booking Date:</label>
+      <input
+        type="date"
+        name="movieBookingdate"
+        id="movieBookingdate"
+        formControlName="movieBookingdate"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="noOfTickets">Number Of Tickets:</label>
+      <input
+        type="number"
+        name="noOfTickets"
+        id="noOfTickets"
+        placeholder="2"
+        formControlName="noOfTickets"
+        class="form-control"
+      />
+    </div>
+    <input type="submit" value="Submit" class="btn-block btn-primary" />
+  </form>
+</div>
