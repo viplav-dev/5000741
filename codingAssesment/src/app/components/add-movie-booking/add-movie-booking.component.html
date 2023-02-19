@@ -3,7 +3,7 @@
   <form
     [formGroup]="addMovieForm"
     class="form"
-    (ngSubmit)="addMovieBooking(addMovieForm.value)"
+    (ngSubmit)="onAddMovieBooking(addMovieForm.value)"
   >
     <div class="form-group">
       <label for="id">Movie Id:</label>
@@ -16,6 +16,15 @@
         class="form-control"
         required
       />
+      <p
+        class="text-danger"
+        *ngIf="
+          this.addMovieForm.controls.id.touched &&
+          !this.addMovieForm.controls.id.valid
+        "
+      >
+        Please enter movie Id between 1 - 300
+      </p>
     </div>
     <div class="form-group">
       <label for="movieName">Movie Name:</label>
@@ -28,6 +37,15 @@
         class="form-control"
         required
       />
+      <p
+        class="text-danger"
+        *ngIf="
+          this.addMovieForm.controls.movieName.touched &&
+          !this.addMovieForm.controls.movieName.valid
+        "
+      >
+        Please enter a valid Movie Name
+      </p>
     </div>
     <div class="form-group">
       <label for="movieBookingdate">Booking Date:</label>
@@ -50,6 +68,15 @@
         formControlName="noOfTickets"
         class="form-control"
       />
+      <p
+        class="text-danger"
+        *ngIf="
+          this.addMovieForm.controls.noOfTickets.touched &&
+          !this.addMovieForm.controls.noOfTickets.valid
+        "
+      >
+        Please enter Number of tickets between 1 - 15
+      </p>
     </div>
     <input type="submit" value="Submit" class="btn-block btn-primary" />
   </form>

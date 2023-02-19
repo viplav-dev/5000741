@@ -26,11 +26,11 @@ export class AddMovieBookingComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
   addMovieForm = new FormGroup({
-    id: new FormControl(''),
+    id: new FormControl('',[Validators.required, Validators.pattern('^[0-9]*$'),Validators.max(300)]),
     movieName: new FormControl('', [
       Validators.required,
       Validators.maxLength(20),
-      Validators.pattern('^[a-zA-Z]*$'),
+      Validators.pattern('^[a-z A-Z]*$'),
     ]),
     movieBookingdate: new FormControl(''),
     noOfTickets: new FormControl('', [
@@ -39,8 +39,13 @@ export class AddMovieBookingComponent implements OnInit {
     ]),
   });
 
-  addMovieBooking(data: any) {
+  onAddMovieBooking(data: any) {
+   if(this.addMovieForm.valid){
     this.service.addMovieBooking(data);
     this.router.navigate(['listmoviebooking']);
+   }
+   else{
+      alert("Invalid Data");
+   }
   }
 }
