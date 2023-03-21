@@ -1,0 +1,70 @@
+# this is an auto generated file. This will be overwritten
+query SearchNotes(
+  $filter: SearchableNoteFilterInput
+  $sort: [SearchableNoteSortInput]
+  $limit: Int
+  $nextToken: String
+  $from: Int
+  $aggregates: [SearchableNoteAggregationInput]
+) {
+  searchNotes(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+    from: $from
+    aggregates: $aggregates
+  ) {
+    items {
+      id
+      title
+      description
+      createdAt
+      updatedAt
+      owner
+    }
+    nextToken
+    total
+    aggregateItems {
+      name
+      result {
+        ... on SearchableAggregateScalarResult {
+          value
+        }
+        ... on SearchableAggregateBucketResult {
+          buckets {
+            key
+            doc_count
+          }
+        }
+      }
+    }
+  }
+}
+query GetNote($id: ID!) {
+  getNote(id: $id) {
+    id
+    title
+    description
+    createdAt
+    updatedAt
+    owner
+  }
+}
+query ListNotes(
+  $filter: ModelNoteFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listNotes(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      description
+      createdAt
+      updatedAt
+      owner
+    }
+    nextToken
+  }
+}
